@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+h1 {
+color:aliceblue;
+text-align: center;
+font-family: 'Brush Script MT', cursive;
+font-size: 90px;
+font-weight: 1;
+}
+
+#sec-1{
+  font-size: 75px;
+  color:azure;
+  font-weight: 500;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.sec-2{
+  font-size: 75px;
+  color:rgb(9, 44, 44);
+  font-weight: 500;
+  font-family: 'Brush Script MT', cursive;
+}
+
+@keyframes slideDown {
+  from{
+    transform: translateY(-100px);
+  }
+
+  top{
+    transform: translateY(0);
+  }
+}
+
+.slideDown {
+  animation-name: slideDown;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.btw{
+  color: black;
+  position: absolute; top: 0px; right: 0px;
+  border-radius: 40px;
+  background-color: aliceblue;
+  padding: 5px 30px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 50px;
+}
+#btw1 {
+  color: black;
+  position: absolute; top: 50px; right: 0px;
+  border-radius: 40px;
+  background-color: aliceblue;
+  padding: 5px 30px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 50px;
+}
