@@ -1,32 +1,24 @@
 // frontend/src/App.js
 import React from 'react';
-
+import {Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import About from './components/About';
-import Skills from './components/Skills';
+
 import './App.css';
+import Navbar from './components/Navbar';
+import Register from './components/Register';
+import Login from './components/Login';
 const App = () => {
   return (
 
-      <div>
+      <>
         {/* Navigation can be added here */}
-        <nav>
-          <ul>
-            <li className="btw"><a href="#home">Home</a></li>
-            <li id="btw1"><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-          </ul>
-        </nav>
-        <section id="home">
-        <Home />
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <section id="skills">
-        <Skills />
-      </section>
-      </div>
+        <Navbar/>
+        <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/login' element={<Login/>} />
+        <Route path='/register' element={<Register/>} />
+        </Routes>
+      </>
     
   );
 };
