@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import axios from 'axios'
 
 export default function Register() {
 
@@ -8,8 +9,28 @@ export default function Register() {
         password:'',
     })
 
-    const registerUser = (e) => {
+    const registerUser = async (e) => {
+        
         e.preventDefault()
+        const data = JSON.stringify({
+            "username":e.target[0].value,
+            "email":e.target[1].value,
+            "password":e.target[2].value
+          });
+          
+          const xhr = new XMLHttpRequest();
+          xhr.withCredentials = true;
+          
+          xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === this.DONE) {
+              console.log(this.responseText);
+            }
+          });
+          
+          xhr.open("POST", "http://localhost:5000/api/user/register");
+          xhr.setRequestHeader("Content-Type", "application/json");
+          
+          xhr.send(data);
     }
 
     return(
